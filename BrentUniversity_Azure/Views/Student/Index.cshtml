@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BrentUniversity_Azure.Data.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-hover table-condensed table-striped">
+    <tr>
+        <th class="active">
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="success">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th class="warning">
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </th>
+        <th class="danger">
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

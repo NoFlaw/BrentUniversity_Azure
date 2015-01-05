@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure", "BrentUniversity_Azure\BrentUniversity_Azure.csproj", "{D69043EA-62BA-45DB-A0B3-EC3878D4CB5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{71FBA28E-1E57-4F2F-BFBD-D1369F2E2222}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{F74C8C67-1328-466A-B6E3-CAEB60C4C786}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\BrentUniversityAzure-WAWS-dev.json = PublishScripts\Configurations\BrentUniversityAzure-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.Repository", "BrentUniversity_Azure.Repository\BrentUniversity_Azure.Repository.csproj", "{29C3CD67-1F4B-4443-B4EA-BE48B841707F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.Data", "BrentUniversity_Azure.Data\BrentUniversity_Azure.Data.csproj", "{DB7A2556-C676-45B2-9A5A-EB34A0C3ADAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.Service", "BrentUniversity_Azure.Service\BrentUniversity_Azure.Service.csproj", "{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D69043EA-62BA-45DB-A0B3-EC3878D4CB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69043EA-62BA-45DB-A0B3-EC3878D4CB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69043EA-62BA-45DB-A0B3-EC3878D4CB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69043EA-62BA-45DB-A0B3-EC3878D4CB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C3CD67-1F4B-4443-B4EA-BE48B841707F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C3CD67-1F4B-4443-B4EA-BE48B841707F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C3CD67-1F4B-4443-B4EA-BE48B841707F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C3CD67-1F4B-4443-B4EA-BE48B841707F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7A2556-C676-45B2-9A5A-EB34A0C3ADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7A2556-C676-45B2-9A5A-EB34A0C3ADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7A2556-C676-45B2-9A5A-EB34A0C3ADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7A2556-C676-45B2-9A5A-EB34A0C3ADAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F74C8C67-1328-466A-B6E3-CAEB60C4C786} = {71FBA28E-1E57-4F2F-BFBD-D1369F2E2222}
+	EndGlobalSection
+EndGlobal
