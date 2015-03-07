@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.Service", "BrentUniversity_Azure.Service\BrentUniversity_Azure.Service.csproj", "{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.UnitTests", "BrentUniversity_Azure.UnitTests\BrentUniversity_Azure.UnitTests.csproj", "{C6DA75AD-78DF-47F7-844A-FA8C906799B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrentUniversity_Azure.IntegrationTests", "BrentUniversity_Azure.IntegrationTests\BrentUniversity_Azure.IntegrationTests.csproj", "{056E2688-1E44-46E1-9D24-1C08594CF35C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DA75AD-78DF-47F7-844A-FA8C906799B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DA75AD-78DF-47F7-844A-FA8C906799B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DA75AD-78DF-47F7-844A-FA8C906799B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DA75AD-78DF-47F7-844A-FA8C906799B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056E2688-1E44-46E1-9D24-1C08594CF35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056E2688-1E44-46E1-9D24-1C08594CF35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056E2688-1E44-46E1-9D24-1C08594CF35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056E2688-1E44-46E1-9D24-1C08594CF35C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
