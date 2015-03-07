@@ -1,6 +1,6 @@
 ﻿using BrentUniversity_Azure.Data;
-using BrentUniversity_Azure.Data.TestData;
 using BrentUniversity_Azure.Service;
+using BrentUniversity_Azure.TestCommon;
 using NUnit.Framework;
 using Telerik.JustMock;
 
@@ -68,7 +68,7 @@ namespace BrentUniversity_Azure.UnitTests.Service
         protected override Student Act()
         {
             //Todo: Do Work
-            _student = DataFactory.GetStudent();
+            _student = DataFactory.GetStudent;
             MockingContainer.Instance.Create(_student);
             return _student;
         }

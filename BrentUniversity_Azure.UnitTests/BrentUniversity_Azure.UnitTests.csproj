@@ -68,6 +68,10 @@
       <Project>{59FFCBF4-0A79-4D0C-A4F9-F9CB4A8035B8}</Project>
       <Name>BrentUniversity_Azure.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BrentUniversity_Azure.TestCommon\BrentUniversity_Azure.TestCommon.csproj">
+      <Project>{58C0E1C5-ABC3-48F7-948E-F65FCF3D053B}</Project>
+      <Name>BrentUniversity_Azure.TestCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

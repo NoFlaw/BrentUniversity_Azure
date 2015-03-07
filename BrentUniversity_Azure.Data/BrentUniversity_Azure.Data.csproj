@@ -70,7 +70,6 @@
     <Compile Include="Student.cs">
       <DependentUpon>UniversityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TestData\DataFactory.cs" />
     <Compile Include="UniversityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
