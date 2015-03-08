@@ -77,7 +77,7 @@ namespace BrentUniversity_Azure.UnitTests.Service
         /// Step 3 - Assert (Make sure what you expect is true)
         /// </summary>
         [Test]
-        public void test_for_when_creating_a_student()
+        public void then_student_should_be_saved_to_db()
         {
             //Todo: Check did test pass
             MockingContainer.AssertAll();
@@ -117,7 +117,7 @@ namespace BrentUniversity_Azure.UnitTests.Service
         /// Step 3 - Assert (Make sure what you expect is true)
         /// </summary>
         [Test]
-        public void test_for_when_retrieving_student_by_id()
+        public void then_student_should_be_returned_if_found()
         {
             //Todo: Check did test pass
             MockingContainer.AssertAll();

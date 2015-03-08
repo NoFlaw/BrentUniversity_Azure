@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using BrentUniversity_Azure.Data;
 using BrentUniversity_Azure.Repository.Base;
@@ -10,11 +11,30 @@ namespace BrentUniversity_Azure.Service
     public class StudentService : EntityService<Student>, IStudentService
     {
         private readonly IGenericRepository<Student> _studentRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
         public StudentService(IUnitOfWork unitOfWork, IGenericRepository<Student> studentRepository)
             : base(unitOfWork, studentRepository)
         {
-            _studentRepository = unitOfWork.GetRepository<Student>();
+            _unitOfWork = unitOfWork;
+            _studentRepository = studentRepository;
+            _studentRepository = _unitOfWork.GetRepository<Student>();
+        }
+
+        //Implementation of Overriding and exposing UnitOfWork
+        public override void Create(Student entity)
+        {
+            try
+            {
+                //Some special implementation like mapping here
+                _studentRepository.Add(entity);
+                _unitOfWork.Commit();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException(string.Format("Unable to save the student. Error: {0}", ex.InnerException));
+            }
+
         }
 
         public Student GetById(int id)
@@ -25,7 +45,7 @@ namespace BrentUniversity_Azure.Service
             }
             catch (Exception ex)
             {
-                throw new Exception(string.Format("Unable to retrieve the student by the provided Id: {0}, Error: {1}", id, ex));
+                throw new NotSupportedException(string.Format("Unable to retrieve the student by the provided Id: {0}, Error: {1}", id, ex.InnerException));
             }
         }
 
