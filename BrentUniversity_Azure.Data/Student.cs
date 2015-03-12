@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace BrentUniversity_Azure.Data
 {
     using System;
@@ -20,8 +22,14 @@ namespace BrentUniversity_Azure.Data
         }
     
         public int Id { get; set; }
+        
+        [Required]
         public string LastName { get; set; }
+        
+        [Required]
         public string FirstName { get; set; }
+        
+        [Required]
         public System.DateTime EnrollmentDate { get; set; }
     
         public virtual ICollection<Enrollment> Enrollments { get; set; }
