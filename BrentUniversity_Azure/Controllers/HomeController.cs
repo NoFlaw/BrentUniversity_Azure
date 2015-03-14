@@ -9,12 +9,12 @@ namespace BrentUniversity_Azure.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Contact()
         {
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult MyProfile()
         {
             return View();
         }
