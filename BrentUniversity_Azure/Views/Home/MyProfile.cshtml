@@ -75,17 +75,17 @@
                 <h3>Find Brenton Online</h3>
                 Currently I use LinkedIn to stay connected, feel free to visit:
                 <a href="http://www.linkedin.com/in/brentonbates">
-                    <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" alt="View Brenton Bates's profile on LinkedIn">
+                    <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" title="View Brenton Bates's profile on LinkedIn">
                 </a>
                 <br />
                 <br />
                 <h3>My Resume</h3>
                 <ul>
                     <li>
-                        <a href="~/Content/Resume/ViewPdf.html" alt="View My Resume">View</a>
+                        <a id="viewMyResumePdf" href="~/Content/Resume/ViewPdf.html" title="View My Resume">View</a>
                     </li>
                     <li>
-                        @Html.ActionLink("Download", "DownloadPdf", "Home", new { title = "Download My Resume" })
+                        @Html.ActionLink("Download", "DownloadPdf", "Home", null, new { id="downloadMyResume", title = "Download My Resume" })
                     </li>
                 </ul>
             </p>
