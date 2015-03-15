@@ -35,12 +35,12 @@
             <span class="label label-primary">TDD (JustMock / RhinoMocks)</span>
             <span class="label label-primary">SharePoint / Nintex</span>
 
-            <span class="label label-warning">JavaScript</span>
-            <span class="label label-warning">angular.js</span>
-            <span class="label label-warning">jQuery</span>
-            <span class="label label-warning">knockout.js</span>
-            <span class="label label-warning">Kendo UI</span>
-            <span class="label label-warning">HTML5</span>
+            <span class="label label-success">JavaScript</span>
+            <span class="label label-success">angular.js</span>
+            <span class="label label-success">jQuery</span>
+            <span class="label label-success">knockout.js</span>
+            <span class="label label-success">Kendo UI</span>
+            <span class="label label-success">HTML5</span>
             <span class="label label-warning">CSS</span>
             <span class="label label-warning">XML</span>
             <span class="label label-warning">JSON</span>
@@ -51,8 +51,8 @@
             <span class="label label-info">Glimpse</span>
             <span class="label label-info">Fiddler</span>
             <span class="label label-info">Firebug</span>
-            <span class="label label-info">Windows</span>
-            <span class="label label-info">Linux</span>
+            <span class="label label-default">Windows</span>
+            <span class="label label-default">Linux</span>
             <hr />
         </div>
         <div>
@@ -72,19 +72,19 @@
                 <br />
                 <br />
                 <h3>Find Brenton Online</h3>
-                Currently I use LinkedIn to stay connected, feel free to visit my profile:
+                Currently I use LinkedIn to stay connected, feel free to visit:
                 <a href="http://www.linkedin.com/in/brentonbates">
                     <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" alt="View Brenton Bates's profile on LinkedIn">
                 </a>
                 <br />
                 <br />
-                <h3>View My Resume</h3>
+                <h3>My Resume</h3>
                 <ul>
                     <li>
-                        @Html.ActionLink("View", "ViewPdf", "Home", null, new { target = "_blank" })
+                        <a href="~/Content/resume/ViewPdf.html" alt="View My Resume">View</a>
                     </li>
                     <li>
-                        @Html.ActionLink("Download", "DownloadPdf", "Home")
+                        @Html.ActionLink("Download", "DownloadPdf", "Home", new {title = "Download My Resume"})
                     </li>
                 </ul>
             </p>
