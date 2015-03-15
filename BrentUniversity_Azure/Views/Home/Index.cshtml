@@ -29,27 +29,29 @@
     <div class="col-md-4">
         <h3><strong>Want to see Glimpse in action?</strong></h3>
         <p>
-            If you want more insights into my application how about check out what goodies glimpse can offer!
-            click the button below to turn it on, then come back and view the bottom right corner of your
+            If you want more insights into my application, how about check out what goodies glimpse can offer!
+            Click the button below to turn it on, then come back and view the bottom right corner of your
             browser window. Have Fun!
         </p>
-        <p><a class="btn btn-info" href="http://brentuniversityazure.azurewebsites.net/glimpse.axd">Turn On Glimpse &raquo;</a></p>
+        <p><a class="btn btn-info" href="http://brentuniversityazure.azurewebsites.net/glimpse.axd">Turn On Glimpse</a></p>
     </div>
     <div class="col-md-4">
-        <h3><strong>Want to check out the source?</strong></h3>
+        <h3><strong>Want to the soruce?</strong></h3>
         <p>
             Navigate to github and search for BrentUniversity_Azure, that is the name of the repository for this project.
             Feel free to click the button below to be directly navigated to my github profile which has plenty of repositories
             for you to browse to if you are interested.
         </p>
-        <p><a class="btn btn-warning" href="https://github.com/NoFlaw/BrentUniversity_Azure">Goto GitHub &raquo;</a></p>
+        <p><a class="btn btn-warning" href="https://github.com/NoFlaw/BrentUniversity_Azure">View the Code</a></p>
     </div>
     <div class="col-md-4">
-        <h3><strong>Visit My LinkedIn</strong></h3>
+        <h3><strong>Visit My Profile</strong></h3>
         <p>
-            You can easily find out more about experience and abilities on LinkedIn. I'm open to collaboration and hope you have
-            enjoyed taking a tour of my application.
+            You can easily find out more about my background, experience and abilities on my profile. Head on over by clicking below,
+            I'm always open to collaboration and hope you have enjoyed taking a tour of my application.
         </p>
-        <p><a class="btn btn-success" href="https://www.linkedin.com/in/brentonbates">Goto LinkedIn &raquo;</a></p>
+        <p>
+            @Html.ActionLink("My Profile", "MyProfile", "Home", new { @class = "btn btn-success" })
+        </p>
     </div>
 </div>
