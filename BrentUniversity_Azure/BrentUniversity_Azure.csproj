@@ -223,8 +223,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\profile\BrentonBates.png" />
-    <Content Include="Content\resume\ViewPdf.html" />
+    <Content Include="Content\Profile\BrentonBates.png" />
+    <Content Include="Content\Resume\ViewPdf.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -279,7 +279,7 @@
     <Content Include="Content\less\bootstrap-datetimepicker-build.less" />
     <Content Include="Content\less\bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
-    <Content Include="Content\resume\BrentonBates_WebDev_Resume.pdf" />
+    <Content Include="Content\Resume\BrentonBates_WebDev_Resume.pdf" />
     <None Include="Properties\PublishProfiles\BrentUniversityAzure.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
