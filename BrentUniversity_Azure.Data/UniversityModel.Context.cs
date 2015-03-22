@@ -41,6 +41,7 @@ namespace BrentUniversity_Azure.Data
             : base("name=UniversityContext")
         {
             this.Configuration.LazyLoadingEnabled = true;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public new IDbSet<T> Set<T>() where T : class

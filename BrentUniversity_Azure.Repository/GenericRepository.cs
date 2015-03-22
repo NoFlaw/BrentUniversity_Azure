@@ -174,6 +174,24 @@ namespace BrentUniversity_Azure.Repository
             return DbSet.AsQueryable();
         }
 
+        //Todo: This is for serialization issue with knockout binding
+        //public IEnumerable<TEntity> ListIncluding<TEntity>(params Expression<Func<TEntity, object>>[] includeProperties) where TEntity : class
+        //{
+        //    bool cachedSetting = DbSet.Configuration.ProxyCreationEnabled;
+        //    _context.Configuration.ProxyCreationEnabled = false;
+
+        //    IQueryable<TEntity> query = _context.Set<TEntity>();
+        //    foreach (var includeProperty in includeProperties)
+        //    {
+        //        query = query.Include(includeProperty);
+        //    }
+        //    IEnumerable<TEntity> list = query.ToList();
+        //    _context.Configuration.ProxyCreationEnabled = cachedSetting;
+
+        //    return list;
+        //} 
+
+
         /// <summary>
         ///     Adds specified entity to the collection.
         ///     No changes are persisted to the database until the Save is called.
