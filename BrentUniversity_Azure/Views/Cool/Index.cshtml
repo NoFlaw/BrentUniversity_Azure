@@ -12,88 +12,52 @@
         <tbody data-bind="template: { name: 'studentTemplate', foreach: Students }"></tbody>
     </table>
 
-    <button data-bind="click: addStudent">Add Student</button>
+    @*<button data-bind="click: addStudent">Add Student</button>*@
     <button data-bind="enable: Students().length > 0" type="submit">Submit</button>
 }
 
 <script type="text/html" id="studentTemplate">
     <tr>
+        <td>FullName: <input data-bind="value: FullName, uniqueName: true" /></td>
         <td>@Html.DisplayNameFor(model => model.LastName) <input data-bind="value: LastName, uniqueName: true" /></td>
         <td>@Html.DisplayNameFor(model => model.FirstName) <input data-bind="value: FirstName, uniqueName: true" /></td>
-        <td>@Html.DisplayNameFor(model => model.EnrollmentDate) <input data-bind="value: EnrollmentDate, uniqueName: true" /></td>
-        <td><a href="#" data-bind="click: function() { removeStudent($data) }">Delete</a></td> 
+        <td>@Html.DisplayNameFor(model => model.EnrollmentDate) <input data-bind="value: moment(EnrollmentDate()).format('MM/DD/YYYY'), uniqueName: true" /></td>
+        @*Needs tweaked DateTime part not working, moment in use manually*@
+        @*<td>@Html.DisplayNameFor(model => model.EnrollmentDate) <input data-bind="DateTime: EnrollmentDate, value: moment(EnrollmentDate()).format('MM/DD/YYYY'), uniqueName: true" /></td>*@
+        <td><a href="#" data-bind="click: function() { removeStudent($data) }">Delete</a></td>
         @*<td><a href='#' data-bind='click: $root.removeStudent'>Delete</a></td>*@
     </tr>
 </script>
 
 @section scripts{  
-<script type="text/javascript">
+    <script type="text/javascript">
+       
+        $(document).ready(function() {
 
-    @*<script src="~/Scripts/knockout-3.3.0.debug.js"></script>
-    var urlPath = window.location.pathname;
-    var ViewModel = ko.mapping.fromJS(@Html.Raw(Json.Encode(Model)));
-    <script src="~/Scripts/knockout.mapping-latest.debug.js"></script>*@
+            function studentModel(data) {
+                var self = this;
 
-    //Document Ready
-    $(function () {
-        ko.applyBindings(StudentViewModel);
-        StudentViewModel.getStudents();
-    });
+                self.Id = ko.observable(data.StudentId);
+                self.FirstName = ko.observable(data.FirstName);
+                self.LastName = ko.observable(data.LastName);
+                self.EnrollmentDate = ko.observable(data.EnrollmentDate);
 
-    //View Model
-    var StudentViewModel =
-    {
-        Students: ko.observableArray([]),
-        getStudents: function () {
-            var self = this;
-            $.ajax({
-                type: "GET",
-                url: '/Cool/GetAllStudents',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    self.Students(data); //Put the response in ObservableArray
-                },
-                error: function (err) {
-                    alert(err.status + " : " + err.statusText);
-                }
-            });
-        },
-    };
+                self.FullName = ko.computed(function() {
+                    return self.FirstName() + ' ' + self.LastName();
+                });
+            }
+        
+            function studentViewModel() {
+                var self = this;
+                self.Students = ko.observableArray([]);
+                self.GetStudents = $.getJSON("/Cool/GetAllStudents", function(data) {
+                    self.Students($.map(data, function(item) {
+                        return new studentModel(item);
+                    }));
+                });
+            };
 
-    var self = this;
-
-    //Model
-    function Students(data)
-    {
-        this.Id = ko.observable(data.StudentId);
-        this.FirstName = ko.observable(data.FirstName);
-        this.LastName = ko.observable(data.LastName);
-        this.EnrollmentDate = ko.observable(data.EnrollmentDate);
-    };
-
-    //Adding Student
-    self.addStudent = function ()
-    {
-        this.Students.push({
-            FirstName: "",
-            LastName: "",
-            EnrollmentDate: null
+            ko.applyBindings(new studentViewModel());
         });
-    };
-
-    //Removing Student
-    self.removeStudent = function (student)
-    {
-       this.Students.remove(student);
-    };
-
-    //Saving Student
-    self.save = function (form)
-    {
-        alert("Could now transmit to server: " + ko.utils.stringifyJson(this.Students));
-        // To actually transmit to server as a regular form post, write this: ko.utils.postJson($("form")[0], this.Students);
-    };
-
-</script>  
+    </script>  
 }
